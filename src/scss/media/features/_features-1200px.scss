@@ -1,0 +1,54 @@
+@media (min-width: 993px) {
+	.section-features {
+		@include flex(flex, column, center);
+		background-color:#F4F4F4;
+		padding: 100px 0 40px;
+
+		.section-container {
+			flex-direction: row;
+			max-width: 1200px;
+		}
+
+		&__title {
+			display: none;
+
+		}
+	
+		&__image {
+			width: 120%;
+
+			img {
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+		
+		&__title-image {
+			@include font($ff_montserrat, $fw_text_bold, 48px, 50px);
+			color: $cr_bg_blueviolet;
+			padding-bottom: 25px;
+			display: flex;
+			flex-direction: column;
+			padding-left: 20px;
+		}
+	}
+
+	.features {
+		flex-direction: row;
+		padding-bottom: 35px;
+		
+		&__icon {
+			padding-bottom: 0;
+		}
+		
+		&__title {
+			line-height: 21px;
+			text-align: inherit;
+		}
+	
+		&__description {
+			text-align: inherit;
+			padding: 0;
+		}
+	}
+}

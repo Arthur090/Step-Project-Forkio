@@ -1,0 +1,5 @@
+@mixin flex($fx, $cmn, $cr) {
+    display: $fx;
+    flex-direction: $cmn;
+	align-items: $cr;
+}

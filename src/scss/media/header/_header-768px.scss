@@ -1,0 +1,230 @@
+@media (min-width: 481px) and (max-width: 992px) {
+
+	.header {
+
+		.content-wrap {
+			background-image: url('../img/img1.png');
+			background-size: cover;
+			height: 80vh;
+			background-position: 50%;
+			margin-bottom: 90px;
+			position: relative;
+		}
+
+		&__title {
+			@include font($ff_montserrat, $fw_text_bold, 72px, 72px);
+			color: #FFFFFF;
+			text-align: center;
+			padding: 69px 30px 0;
+		}
+
+		&__description {
+			@include font($ff_lato, $fw_regular, 24px, 24px);
+			color: $cr_bg_blueviolet;
+			text-align: center;
+			margin-top: 19px;
+			padding: 0 30px;
+			display: none;
+		}
+
+		&__version {
+			@include font($ff_montserrat, $fw_regular, $fs_text_medium, 14px);
+			text-transform: uppercase;
+			color: #848E97;
+			text-align: center;
+			margin-top: 19px;
+			padding: 0 30px;
+		}
+	}
+
+	.description-laptop {
+		@include font($ff_lato, $fw_regular, 24px, 24px);
+		color: $cr_bg_blueviolet;
+		text-align: center;
+		margin-top: 19px;
+		padding: 0 30px;
+		display: block;
+		text-transform: lowercase;
+	}
+
+	.capital-letter {
+		text-transform: uppercase;
+	}
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 24px 20px 55px;
+		background-color: #27262A;
+
+		&__wrap {
+			width: 100%;
+		}
+
+		&__wrap-logo {
+			display: flex;
+			align-items: center;
+		}
+
+		&__link {
+			padding: 10px 40px;
+			background-color: $cr_bg_blueviolet;
+			border-radius: 40px;
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+
+	.container-logo {
+		display: flex;
+		align-items: center;
+		transition: all .5s;
+		position: relative;
+
+		&__img {
+			width: 43px;
+			height: 41px;
+			margin-right: 17px;
+			opacity: 1;
+
+		}
+
+		&__img:hover {
+			width: 43px;
+			height: 41px;
+			margin-right: 17px;
+			opacity: 0;
+		}
+
+		&__img-hover {
+			width: 43px;
+			height: 41px;
+			margin-right: 17px;
+			position: absolute;
+			opacity: 0;
+			display: block;
+			transition: all .5s;
+		}
+
+		&__img-hover:hover {
+			width: 43px;
+			height: 41px;
+			margin-right: 17px;
+			opacity: 1;
+		}
+
+		&__text {
+			@include font($ff_lato, $fw_text_bold, 24px, 16px);
+			text-transform: uppercase;
+			color: $cr_bg_blueviolet;
+			display: block;
+			margin-left: 17px;
+		}
+
+		&__text:hover {
+			color: #fff;
+			display: block;
+		}
+	}
+
+	.menu {
+		display: flex;
+		justify-content: flex-end;
+
+		&__list {
+			position: absolute;
+			top: 80px;
+			right: 0;
+			left: 50%;
+			z-index: 10;
+			background-color: #333333;
+			transform: translateX(-50%);
+			transition: transform 0.6s ease-in-out;
+			display: flex;
+			justify-content: center;
+			z-index: 10;
+			padding: 0;
+			background-color: transparent;
+			width: 100%;
+			gap: 0;
+		}
+
+		&__list_visible {
+			transform: none;
+		}
+
+		&__item {
+			padding: 0;
+			margin: 0 30px;
+			position: relative;
+			border-bottom: none;
+		}
+
+		&__item:nth-child(4) {
+			margin-bottom: 0;
+		}
+
+
+		&__link {
+			@include font($ff_montserrat, $fw_text_bold, 16px, 19px);
+			text-decoration: none;
+			color: $cr_bg_blueviolet;
+			align-items: center;
+		}
+
+		&__link:hover:after {
+			content: '';
+			position: absolute;
+			width: 8px;
+			height: 53px;
+			left: 3px;
+			top: 10px;
+			background-color: $cr_bg_blueviolet;
+		}
+
+		&__link:hover {
+			color: #8D81AC;
+		}
+	}
+
+	.burger {
+		display: none;
+	}
+
+	.container-bottom {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		right: 50%;
+		transform: translate(50%, -3%);
+		width: 100%;
+		height: 100vh;
+
+		&__link {
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 20px;
+			text-align: center;
+			color: #FFFFFF;
+			padding: 13px 29px;
+			background-color: #8D81AC;
+			border-radius: 40px;
+			margin-bottom: 13px;
+			text-decoration: none;
+		}
+
+		&__text {
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 14px;
+			text-align: center;
+			color: #848E97;
+		}
+	}
+}

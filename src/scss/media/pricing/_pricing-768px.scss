@@ -1,0 +1,42 @@
+@media (min-width: 481px) and (max-width: 992px) {
+	.section-pricing {
+
+		&__title {
+			margin: 90px 0px 40px 0px;
+		}
+
+		&__row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 25px;
+			margin-bottom: 94px;
+			max-width: 630px;
+		}
+
+		&__column:nth-child(4) {
+			margin-right: 43px;
+			margin-top: 46px;
+		}
+	}
+
+	.title {
+		font-size: 42px;
+		line-height: 44px;
+	}
+
+	.item-pricing {
+		margin-bottom: 0;
+
+		&__text {
+			line-height: 18px;
+		}
+		.text {
+			margin-bottom: 56px;
+		}
+	}
+
+	.active-text {
+		line-height: 18px;
+	}
+}

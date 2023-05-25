@@ -1,0 +1,231 @@
+.header {
+
+	.content-wrap {
+		background-image: url('../img/img1.png');
+		background-size: cover;
+		height: 80vh;
+		background-position: 50%;
+		margin-bottom: 90px;
+		position: relative;
+	}
+
+		&__title {
+			@include font($ff_montserrat, $fw_text_bold, 48px, 48px);
+			color: #FFFFFF;
+			text-align: center;
+			padding: 49px 30px 0;
+		}
+
+		&__description {
+			@include font($ff_montserrat, $fw_regular, 18px, 24px);
+			color: #8D81AC;
+			text-align: center;
+			margin-top: 19px;
+			padding: 0 30px;
+		}
+
+		&__version {
+			@include font($ff_montserrat, $fw_regular, $fs_text_medium, 14px);
+			text-transform: uppercase;
+			color: #848E97;
+			text-align: center;
+			margin-top: 14px;
+			padding: 0 30px;
+		}
+}
+
+.description-laptop {
+	@include font($ff_lato, $fw_regular, 24px, 24px);
+	color: $cr_bg_blueviolet;
+	text-align: center;
+	margin-top: 19px;
+	padding: 0 30px;
+	display: none;
+	text-transform: lowercase;
+}
+
+.container {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+	padding: 28px 16px;
+	background-color: #27262A;
+
+		&__wrap{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 68%;
+		}
+
+		&__link {
+			background-color: $cr_bg_blueviolet;
+			border-radius: 40px;
+			padding: 10px 20px;
+			color: #fff;
+			text-decoration: none;
+			transition: all .5s;
+		}
+}
+
+.container-logo {
+
+	&__img {
+		width: 43px;
+		height: 41px;
+		margin-right: 17px;
+		opacity: 1;
+	}
+
+	&__img-hover {
+		width: 43px;
+		height: 41px;
+		margin-right: 17px;
+		opacity: 0;
+		display: none;
+	}
+
+	&__text {
+		display: none;
+	}
+}
+
+.menu {
+	display: flex;
+	justify-content: flex-end;
+
+	&__list {
+		position: fixed;
+		top: 100px;
+		right: 20px;
+		left: 20px;
+		z-index: 10;
+		background-color: #333333;
+		transform: translateX(120%);
+		transition: transform 0.6s ease-in-out;
+	}
+	&__list_visible {
+		transform: none;
+	}
+	&__item {
+		padding: 29px 0 21px 40px;
+		position: relative;
+		border-bottom: 1px solid #3B3B3B;
+	}
+
+	&__item:nth-child(4) {
+		margin-bottom: 14px;
+	}
+
+	&__link {
+		@include font($ff_montserrat, $fw_regular, $fs_text_large, 26px);
+		text-decoration: none;
+		color: #FFFFFF;
+	}
+	&__link:hover:after {
+		content: '';
+		position: absolute;
+		width: 8px;
+		height: 53px;
+		left: 3px;
+		top: 10px;
+		background-color: #8D81AC;
+	}
+	&__link:hover {
+		color: #8D81AC;
+	}
+}
+
+.burger {
+	position: relative;
+	width: 44px;
+	height: 37px;
+	border: none;
+	padding: 0;
+	background-color: transparent;
+	cursor: pointer;
+
+	&__line {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 26px;
+		height: 3px;
+		border-radius: 5px;
+		background-color: $cr_bg_btn;
+		transform: translate(-50%, -50%);
+		transition: opacity .3s ease-in-out;
+	}
+}
+
+.container-bottom {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    transform: translate(50%, -3%);
+    width: 100%;
+    height: 100vh;
+
+	&__link {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 20px;
+		text-align: center;
+		color: #FFFFFF;
+		padding: 13px 29px;
+		background-color: #8D81AC;
+		border-radius: 40px;
+		margin-bottom: 13px;
+		text-decoration: none;
+	}
+
+	&__text {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 14px;
+		text-align: center;
+		color: #848E97;
+	}
+}
+
+.burger::before,
+.burger::after {
+	content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 3px;
+	border-radius: 5px;
+    background-color: #B9B9B9;
+    transition: transform 0.3s ease-in-out;
+}
+.burger::before{
+	top: 8px;
+	left: 50%;
+}
+.burger::after{
+	bottom: 9px;
+	left: 50%;
+}
+
+.burger_active .burger__line{
+	opacity: 0;
+}
+.burger_active::before {
+	left: 50%;
+	transform: translateX(-50%) rotate(45deg);
+	top:auto;
+}
+.burger_active::after {
+	left: 50%;
+	transform: translateX(-50%) rotate(-45deg);
+	bottom: auto;
+}

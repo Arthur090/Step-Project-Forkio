@@ -1,0 +1,24 @@
+@import 'fonts';
+@import 'reset';
+@import 'templates/variables';
+@import 'templates/mixin-font';
+@import 'templates/mixin-flex';
+@import 'sections/header';
+@import 'sections/revolutionary-editor';
+@import 'sections/features';
+@import 'sections/testmoonials';
+@import 'sections/pricing';
+@import 'media/header/header-768px';
+@import 'media/header/header-1200px';
+@import 'media/revolutionary-editor/revolutionary-editor-768px';
+@import 'media/revolutionary-editor/revolutionary-editor-1200px';
+@import 'media/features/features-768px';
+@import 'media/features/features-1200px';
+@import 'media/testmoonials/testmoonials-768px';
+@import 'media/testmoonials/testmoonials-1200px';
+@import 'media/pricing/pricing-768px';
+@import 'media/pricing/pricing-1200px';
+
+body {
+	font-family: 'Montserrat', 'Lato', sans-serif;
+}

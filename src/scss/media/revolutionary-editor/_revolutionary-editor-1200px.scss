@@ -1,0 +1,15 @@
+@media (min-width: 993px) {
+	.section-revolutionary {
+	
+		&__title {
+			font-size: 54px;
+			line-height: 54px;
+		}
+	
+		&__description {
+			max-width: 1200px;
+			font-size: 21px;
+			line-height: 32px;
+		}
+	}
+}

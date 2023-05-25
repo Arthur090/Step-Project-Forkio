@@ -1,0 +1,53 @@
+.section-revolutionary {
+	@include flex(flex, column, center);
+	text-align: center;
+	min-width: 320px;
+	padding: 0 10px 120px;
+
+	&__title {
+		@include font($ff_montserrat, $fw_text_bold, $fs_text_large, 28px);
+		text-transform: uppercase;
+		color: $cr_title_dark;
+		padding-bottom: 27px;
+	}
+
+	&__description {
+		@include font($ff_lato, $fw_regular, $fs_text_medium, 20px);
+		color: $cr_text_gray;
+		padding: 0 15px 36px;
+	}
+}
+.section-btn {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+	gap: 15px;
+
+	&__link {
+		display: flex;
+		text-decoration: none;
+		border: 1px solid $cr_border_btn;
+		border-radius: 4px;
+		img{
+			padding-right: 3px;
+		}
+	}
+
+	&__name {
+		display: flex;
+		border-right: 1px solid $cr_border_btn;
+		padding: 5px 12px;
+		align-items: center;
+		background-color: $cr_bg_btn;
+		@include font($ff_montserrat, $fw_text_bold, $fs_text_medium, 15px);
+		color: $cr_text_gray;
+	}
+
+	&__number {
+		display: flex;
+		align-items: center;
+		@include font($ff_montserrat, $fw_text_bold, $fs_text_small, 13px);
+		color: $cr_text_gray;
+		padding: 5px 12px;
+	}
+}
